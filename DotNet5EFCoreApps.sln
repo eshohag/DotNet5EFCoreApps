@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFast.Web", "CodeFast.Web\CodeFast.Web.csproj", "{02CF0BD5-BD2C-44A8-9E9D-FD77188D7FB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirst.Web", "DatabaseFirst.Web\DatabaseFirst.Web.csproj", "{9C30CA00-D935-400A-B916-E012D4F66B60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02CF0BD5-BD2C-44A8-9E9D-FD77188D7FB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02CF0BD5-BD2C-44A8-9E9D-FD77188D7FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02CF0BD5-BD2C-44A8-9E9D-FD77188D7FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02CF0BD5-BD2C-44A8-9E9D-FD77188D7FB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C30CA00-D935-400A-B916-E012D4F66B60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C30CA00-D935-400A-B916-E012D4F66B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C30CA00-D935-400A-B916-E012D4F66B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C30CA00-D935-400A-B916-E012D4F66B60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B114664-9789-4F48-BC8A-0984943403AE}
+	EndGlobalSection
+EndGlobal

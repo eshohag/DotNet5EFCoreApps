@@ -1,0 +1,56 @@
+﻿@model Student
+<!--Modal Body Start-->
+
+<div class="modal-content">
+    <!--Modal Header Start-->
+    <div class="modal-header">
+        <h4 class="modal-title">Edit User</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+
+    <!--Modal Header End-->
+    <form asp-action="CreateEdit" asp-controller="Student" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="modal-body form-horizontal">
+            <div class="form-group row">
+                @Html.LabelFor(model => model.FirstName, new { @class = "col-sm-2 col-form-label" })
+                <div class="col-sm-10">
+                    <input asp-for="@Model.FirstName" placeholder="Enter First Name" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                @Html.LabelFor(model => model.LastName, new { @class = "col-sm-2 col-form-label" })
+                <div class="col-sm-10">
+                    <input asp-for="@Model.LastName" placeholder="Enter Last Name" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                @Html.LabelFor(model => model.Email, new { @class = "col-sm-2 col-form-label" })
+                <div class="col-sm-10">
+                    <input asp-for="@Model.Email" placeholder="Enter Email" class="form-control" />
+                </div>
+            </div>
+        </div>
+        <!--Modal Footer Start-->
+        @if (ViewBag.Success != null)
+        {
+            <div class="modal-footer">
+                <strong>@ViewBag.Success</strong>
+            </div>
+        }
+
+        <!--Modal Footer Start-->
+        <div class="modal-footer">
+            <button data-dismiss="modal" id="cancel" class="btn btn-default" type="button">Cancel</button>
+            <button class="btn btn-success relative" id="btnSubmit" type="submit">
+                <i class="loader"></i>
+                Submit
+            </button>
+        </div>
+        <!--Modal Footer End-->
+    </form>
+
+</div>
+<!--Modal Body End-->
