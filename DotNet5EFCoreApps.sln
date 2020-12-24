@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{571A456A-D2AD-401D-A331-E3298E6BF6B3}"
 	ProjectSection(SolutionItems) = preProject
 		AutoCompilation_Nuget_Package_Library.txt = AutoCompilation_Nuget_Package_Library.txt
+		CodeFastMigrationTips.txt = CodeFastMigrationTips.txt
 	EndProjectSection
 EndProject
 Global

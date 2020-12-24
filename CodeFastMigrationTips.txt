@@ -1,0 +1,12 @@
+Multiple DbContext Database use a single apps:
+
+Add-Migration InitialCreate -Context TeacherDbContext -o "Migrations/TeacherDb"
+Update-Database -Context TeacherDbContext
+
+
+Single Context:
+Add-Migration InitialCreate
+Update-Database
+
+
+N.B: No need to enable migration in asp.net core
