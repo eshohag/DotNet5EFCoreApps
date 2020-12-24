@@ -21,6 +21,7 @@ namespace CodeFast.Web
             services.AddControllersWithViews();
             services.AddMvcCore();
             services.RegisterService(Configuration);
+            services.AddControllersWithViews(x => x.SuppressAsyncSuffixInActionNames = false).AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

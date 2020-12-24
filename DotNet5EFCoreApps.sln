@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFast.Web", "CodeFast.Web\CodeFast.Web.csproj", "{02CF0BD5-BD2C-44A8-9E9D-FD77188D7FB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeFast.Web", "CodeFast.Web\CodeFast.Web.csproj", "{02CF0BD5-BD2C-44A8-9E9D-FD77188D7FB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseFirst.Web", "DatabaseFirst.Web\DatabaseFirst.Web.csproj", "{9C30CA00-D935-400A-B916-E012D4F66B60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseFirst.Web", "DatabaseFirst.Web\DatabaseFirst.Web.csproj", "{9C30CA00-D935-400A-B916-E012D4F66B60}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{571A456A-D2AD-401D-A331-E3298E6BF6B3}"
+	ProjectSection(SolutionItems) = preProject
+		AutoCompilation_Nuget_Package_Library.txt = AutoCompilation_Nuget_Package_Library.txt
+		CodeFastMigrationTips.txt = CodeFastMigrationTips.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
