@@ -5,8 +5,8 @@
 <p>
     <a asp-action="" asp-controller="" asp-area="" asp-route-id="" data-url="Student/Create" data-toggle="modal" data-target="#modal-create-edit" class="popup btn btn-outline-primary">Create New</a>
 </p>
-<table class="table table-hover table-bordered table-striped">
-    <thead class="thead-dark">
+<table class="table table-hover table-bordered table-striped table-sm">
+    <thead class="thead-dark ">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.FirstName)
@@ -23,7 +23,7 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr class="table-sm">
+            <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.FirstName)
                 </td>
