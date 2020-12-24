@@ -1,0 +1,5 @@
+1st NuGetpackage Install-  Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation
+
+2nd Update startup.cs with-
+services.AddControllersWithViews(x=>x.SuppressAsyncSuffixInActionNames = false)
+.AddRazorRuntimeCompilation();
