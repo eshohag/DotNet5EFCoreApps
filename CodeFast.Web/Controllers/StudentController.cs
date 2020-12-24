@@ -33,7 +33,9 @@ namespace CodeFast.Web.Controllers
             {
                 var update = _studentManager.Update(model);
                 if (update != null)
+                {
                     ViewBag.Success = "Successfully updated";
+                }
             }
             return RedirectToAction("Index");
         }
