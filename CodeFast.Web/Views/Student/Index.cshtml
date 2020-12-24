@@ -5,8 +5,8 @@
 <p>
     <a asp-action="" asp-controller="" asp-area="" asp-route-id="" data-url="Student/Create" data-toggle="modal" data-target="#modal-create-edit" class="popup btn btn-outline-primary">Create New</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-hover table-bordered table-striped">
+    <thead class="thead-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.FirstName)
@@ -17,13 +17,13 @@
             <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
-            <th></th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
+            <tr class="table-sm">
                 <td>
                     @Html.DisplayFor(modelItem => item.FirstName)
                 </td>
@@ -34,7 +34,7 @@
                     @Html.DisplayFor(modelItem => item.Email)
                 </td>
                 <td>
-                    <a asp-action="" asp-controller="" asp-area="" asp-route-id=""data-url="Student/CreateEdit/@item.Id" data-toggle="modal" data-target="#modal-create-edit" id="" class="popup">Edit</a> |
+                    <a asp-action="" asp-controller="" asp-area="" asp-route-id=""data-url="Student/Edit/@item.Id" data-toggle="modal" data-target="#modal-create-edit" id="" class="popup">Edit</a> |
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 </td>

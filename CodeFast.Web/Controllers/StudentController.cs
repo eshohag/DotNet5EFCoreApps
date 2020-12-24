@@ -18,14 +18,15 @@ namespace CodeFast.Web.Controllers
             var model = _studentManager.GetStudents().ToList();
             return View(model);
         }
-        public ActionResult CreateEdit(int id = 0)
+        public ActionResult Edit(int id = 0)
         {
             Student model = _studentManager.GetStudentById(id);
             return PartialView(model);
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateEdit(Student model)
+        public ActionResult Edit(Student model)
         {
             //Validate Student  
             if (ModelState.IsValid)
