@@ -33,9 +33,26 @@ namespace CodeFast.Web.Controllers
                 var update = _studentManager.Update(model);
                 if (update != null)
                     ViewBag.Success = "Successfully updated";
-                return RedirectToAction("Index");
             }
-            return PartialView(model);
+            return RedirectToAction("Index");
+        }
+        public ActionResult Create()
+        {
+            return PartialView();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Student model)
+        {
+            if (!ModelState.IsValid)
+            {
+                var create = _studentManager.Create(model);
+                if (create != null)
+                {
+                    ViewBag.Success = "Successfully updated";
+                }
+            }
+            return RedirectToAction("Index");
         }
     }
 }
