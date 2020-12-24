@@ -20,7 +20,8 @@ namespace CodeFast.Web.Controllers
 
         public IActionResult Index()
         {
-            return View();
+
+            return View(new List<UserInfo>());
         }
 
         public IActionResult Privacy()
