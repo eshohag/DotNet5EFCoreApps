@@ -31,11 +31,11 @@ namespace CodeFast.Web.Controllers
             if (ModelState.IsValid)
             {
                 var update = _studentManager.Update(model);
-                ViewBag.Success = "Successfully updated";
+                if (update != null)
+                    ViewBag.Success = "Successfully updated";
                 return RedirectToAction("Index");
             }
             return PartialView(model);
-
         }
     }
 }
