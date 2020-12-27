@@ -7,9 +7,7 @@
     <div class="panel-heading panel-head">Users</div>
     <div class="panel-body">
         <div class="btn-group">
-            <a id="createEditUserModal" data-toggle="modal" asp-action="AddUser" data-target="#modal-action-user" class="btn btn-primary">
-                <i class="glyphicon glyphicon-plus"></i>  Add User
-            </a>
+            <a asp-action="" asp-controller="" asp-area="" asp-route-id="" data-url="Student/Create" data-toggle="modal" data-target="#modal-create" class="popup btn btn-outline-primary">Create New</a>
         </div>
         <div class="top-buffer"></div>
         <table class="table table-bordered table-striped table-condensed">
@@ -45,9 +43,9 @@
     </div>
 </div>
 
-@Html.Partial("_ModalDynamic", new BootstrapModel { Id = "modal-action-user", AreaLabeledId = "modal-action-user-label", Size = 1000 })
+@Html.Partial("_ModalDynamic", new BootstrapModel { Id = "modal-create", AreaLabeledId = "modal-create-label", Size = 1000 })
 
 @section scripts
 {
-    <script src="~/js/Modal.js?id='modal-action-user'&name='shohag'"></script>
-} 
+    <script src="~/js/Modal.js?id='modal-create'"></script>
+}
