@@ -1,4 +1,4 @@
-﻿@model IEnumerable<UserInfo>
+﻿@model IEnumerable<Student>
 @{
     ViewData["Title"] = "Index";
 }
@@ -6,34 +6,42 @@
 <div class="panel panel-primary">
     <div class="panel-heading panel-head">Users</div>
     <div class="panel-body">
-        <div class="btn-group">
-            <a asp-action="" asp-controller="" asp-area="" asp-route-id="" data-url="Student/Create" data-toggle="modal" data-target="#modal-create" class="popup btn btn-outline-primary">Create New</a>
+        <div class="btn-group" style="margin-bottom: 5px;">
+            <a asp-action="" asp-controller="" asp-area="" asp-route-id="" data-url="Student/Create" data-toggle="modal" data-target="#modal-create-edit-detail" class="popup btn btn-outline-primary">Create New</a>
         </div>
         <div class="top-buffer"></div>
         <table class="table table-bordered table-striped table-condensed">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Address</th>
-                    <th>Action</th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var item in Model)
                 {
                     <tr>
-                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Address)</td>
                         <td>
-                            <a id="editUserModal" data-toggle="modal" asp-action="EditUser" asp-route-id="@item.Id" data-target="#modal-action-user"
-                               class="btn btn-info">
-                                <i class="glyphicon glyphicon-pencil"></i>  Edit
-                            </a>
-                            <a id="deleteUserModal" data-toggle="modal" asp-action="DeleteUser" asp-route-id="@item.Id" data-target="#modal-action-user" class="btn btn-danger">
-                                <i class="glyphicon glyphicon-trash"></i>  Delete
-                            </a>
+                            @Html.DisplayFor(modelItem => item.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            <a asp-action="" asp-controller="" asp-area="" asp-route-id="" data-url="Student/Edit/@item.Id" data-toggle="modal" data-target="#modal-create-edit-detail" id="" class="popup">Edit</a> |
+                            <a asp-action="" asp-controller="" asp-area="" asp-route-id="" data-url="Student/Details/@item.Id" data-toggle="modal" data-target="#modal-create-edit-detail" id="" class="popup">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                         </td>
                     </tr>
 
@@ -43,9 +51,8 @@
     </div>
 </div>
 
-@Html.Partial("_ModalDynamic", new BootstrapModel { Id = "modal-create", AreaLabeledId = "modal-create-label", Size = 1000 })
-
+@Html.Partial("_PoupModalWindow")
 @section scripts
 {
-    <script src="~/js/Modal.js?id='modal-create'"></script>
+    <script src="~/js/poupModalWindow.js"></script>
 }
