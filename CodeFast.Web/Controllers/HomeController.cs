@@ -1,4 +1,5 @@
-﻿using CodeFast.Web.Models;
+﻿using CodeFast.Web.Manager.Interface;
+using CodeFast.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,16 +13,19 @@ namespace CodeFast.Web.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IStudentManager _studentManager;
 
-        public HomeController(ILogger<HomeController> logger)
+
+        public HomeController(ILogger<HomeController> logger, IStudentManager studentManager)
         {
             _logger = logger;
-        }
+            _studentManager = studentManager;
 
+        }
         public IActionResult Index()
         {
-
-            return View(new List<UserInfo>());
+            var model = _studentManager.GetStudents().ToList();
+            return View(model);
         }
 
         public IActionResult Privacy()

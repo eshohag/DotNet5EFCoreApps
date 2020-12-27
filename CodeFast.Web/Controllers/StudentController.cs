@@ -22,7 +22,7 @@ namespace CodeFast.Web.Controllers
         {
             Student model = _studentManager.GetStudentById(id);
             return PartialView(model);
-        }
+        }         
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -56,6 +56,11 @@ namespace CodeFast.Web.Controllers
                 }
             }
             return RedirectToAction("Index");
+        }
+        public ActionResult Details(int id = 0)
+        {
+            Student model = _studentManager.GetStudentById(id);
+            return PartialView(model);
         }
     }
 }
